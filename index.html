@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная страница</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+    <link rel="stylesheet" href="style_test.css">
+
+   
+</head>
+<body>
+  <header class="otroi">
+    <div class="otroi_text_x">
+        <h1 class="otroi_text">Открой для себя вдохновляющие карьерные возможности в сфере туризма</h1>
+    <!-- <p>Предлагаем курсы и программы для развития карьеры в сфере туризма, гостеприимства и отдыха</p> -->
+    </div>  
+  
+  </header>
+    <!-- <section>
+        <p>Наша цель - помочь определиться с карьерой в сфере туризма</p>
+        <p></p>
+    </section> -->
+    <section class="professions" id="professions">
+        <div class="popur_prof">
+        <h2 class="popur_x">Популярные профессии</h2>
+        <p class="popur_x2">Мы показываем наиболее востребованные профессии в индустрии туризма, а также описываем их назначение и обязанности</p>
+        </div>
+        <div class="container">
+            <div class="profession">
+              <img class="prof_cart" src="img/Безымянный.png"/>
+              <h3 class="profes">Туроператор</h3>
+              <p class="profes_x">Отвечает за разработку туров, бронирование билетов и отелей для клиентов</p>
+            </div>
+            <div class="profession">
+              <img class="prof_cart" src="img/2.png"/>
+              <h3 class="profes">Гид</h3>
+              <p class="profes_x">Сопровождает туристические группы, рассказывает об исторических достопримечательностях</p>
+            </div>
+            <div class="profession">
+              <img class="prof_cart" src="img/3.png"/>
+              <h3 class="profes">Аниматор</h3>
+              <p class="profes_x">Развлекает и занимает гостей отеля различными мероприятиями</p>
+            </div>
+            <!-- Добавьте другие блоки по аналогии -->
+          </div>
+    </section>
+    <!-- <section id="trebovania">
+        <h3>Требования</h3>
+        <p>Среднее образование</p>
+        <p>Знание иностранных языков</p>
+        <p>Умение работать с компьютером.</p>
+    </section> -->
+    <section class="education" id="education">
+        <div class="education_section">
+        <h2 class="tyr_otr_x">Бурный рост туризма</h2>
+<p class="tyr_otr">Туристическая отрасль в России стремительно развивается - к  2024 году ожидается рост на  15% по сравнению с  2021 годом. Это открывает широкие возможности для карьеры в сфере туризма с высокой зарплатой, стабильностью и перспективами роста.</p>
+
+<div class="container_x">
+  <div class="info-block">
+    <img class="car_2" src="img/4.png"/>
+    <h3>Высокий спрос</h3>
+    <p class="info_x">Растущий интерес россиян к путешествиям внутри страны и за рубежом обеспечивает стабильный спрос на услуги туристических компаний и специалистов отрасли.</p>
+  </div>
+  <div class="info-block">
+    <img class="car_2"  src="img/5.png"/>
+    <h3>Доход</h3>
+    <p class="info_x">Средняя зарплата в туристической отрасли составляет от 50 000 рублей с хорошими перспективами карьерного и зарплатного роста при накоплении опыта.</p>
+  </div>
+  <div class="info-block">
+    <img class="car_2" src="img/6.png"/>
+    <h3>Перспективы</h3>
+    <p class="info_x">К 2024 году прогнозируется рост количества отелей, туристических фирм и агентств. Это создаст дополнительный спрос на квалифицированных специалистов в сфере туризма.</p>
+  </div>
+</div>
+</div>
+    </section>
+    <!-- <section id="skills">
+        <h2>Профессиональные навыки</h2>
+      
+            <p>Коммуникация</p>
+                <p>Работа в команде</p>
+                    <p>Решение проблем</p>
+                        <p>Критическое мышление</p>
+                            <p>Управление временем</p>
+                                <p>Организация</p>
+                                    <p>Аналитические навыки</p>
+                                        <p>Мягкие навыки</p>
+        
+    </section> -->
+    <div class="container">
+      <div class="card">
+        <!-- <img src="https://via.placeholder.com/300" alt="Изображение 1">
+        <div class="text"></div> -->
+        <button class="btn btn-open" id="startQuiz">Пройти тест</button>
+      </div>
+    
+      <!-- <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Изображение 2">
+        <div class="text">Географический тест</div>
+        <button class="btn btn-open" id="startQuiz">Начать тест</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Изображение 3">
+        <div class="text">Текст под изображением</div>
+        <button class="btn btn-open" id="startQuiz">Начать тест</button>
+      </div> -->
+      <div class="modal hidden">
+        <div class="modal-content">
+            <!-- <h2>Quiz App</h2> -->
+            <div id="quiz"></div>
+            <button id="submit" class="button">Далее</button>
+            <button id="retry" class="button hide">Перезапустить</button>
+            <button id="showAnswer" class="button hide">Скрыть</button>
+            <div id="result" class="result"></div>
+            
+            <div id="progressBarContainer">
+                <div id="progressBar"></div>
+                <div id="percentageText"></div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay hidden"></div>
+    </div>
+    <section id="skills">
+      <h2>Профессиональные навыки</h2>
+      <ul class="skills-list">
+          <li>Коммуникация</li>
+          <li>Работа в команде</li>
+          <li>Решение проблем</li>
+          <li>Критическое мышление</li>
+          <li>Управление временем</li>
+          <li>Организация</li>
+          <li>Аналитические навыки</li>
+          <li>Мягкие навыки</li>
+      </ul>
+  </section>
+
+
+
+
+    <!-- <section id="career-opportunities">
+        <h2>Возможности для карьеры</h2>
+        <p>Примеры рабочих мест и статистика...</p>
+        <img src="path/to/career_statistics.jpg" alt="Статистика карьеры">
+    </section> -->
+    
+    <!-- <nav id="navbar">
+        <a href="index.html">Главная</a>
+        <a href="test.html">Тест</a>
+        <a href="settings.html">Настройки</a>
+    </nav> -->
+
+    <div id="bottom-menu">
+      <a href="index.html">Главная</a>
+      <!-- <a href="test.html">Тесты</a> -->
+      <a href="settings.html">Контакты</a>
+      <!-- <button id="themeToggle">Toggle Dark Theme</button> -->
+
+    </div>
+
+    <script src="scriot.js"></script>
+    <footer id="footer">
+      <p>&copy;  2024 Your Name. All rights reserved.</p>
+      <p>Contact us: <a href="mailto:info@example.com">info@example.com</a></p>
+      <p>Follow us on social media:
+        <a href="https://www.facebook.com/yourpage">Facebook</a> |
+        <a href="https://www.twitter.com/yourprofile">Twitter</a> |
+        <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a>
+      </p>
+    </footer>
+</body>
+<script>
+  const quizData = [
+     {
+         question: "Какое из следующих качеств наиболее ценится в профессии туризма?",
+         a: "Эмпатия и эмоциональный интеллект",
+         b: "Командная игра",
+         c: "Стрессоустойчивость и грамотное распределение времени",
+         correct: "A"
+     },
+     {
+         question: "Какой из перечисленных критериев является важным для успешного решения проблем в туризме?",
+         a: "Стратегическое мышление",
+         b: "Командная игра",
+         c: "Стрессоустойчивость и грамотное распределение времени",
+         correct: "A"
+     },
+     {
+         question: "Какое качество помогает в профессии туризма в общении с клиентами и управлении группами?",
+         a: "Стрессоустойчивость и грамотное распределение времени",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Командная игра",
+         correct: "B"
+     },
+     {
+         question: "Какой из перечисленных критериев является ключевым для работы в условиях высокого стресса и конфликтов в туризме?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Стрессоустойчивость и грамотное распределение времени",
+         correct: "C"
+     },
+     {
+         question: "Какое из следующих качеств помогает в профессии туризма в работе с различными людьми и культурами?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Командная игра",
+         correct: "B"
+     },
+     {
+         question: "Какой критерий является важным для успешной работы в команде в туризме?",
+         a: "Стрессоустойчивость и грамотное распределение времени",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Командная игра",
+         correct: "C"
+     },
+     {
+         question: "Какое из следующих качеств помогает в профессии туризма в решении сложных проблем и планировании маршрутов?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Стрессоустойчивость и грамотное распределение времени",
+         correct: "A"
+     },
+     {
+         question: "Какое из перечисленных качеств является важным для работы в условиях высокой конкуренции и постоянно меняющихся условий в туризме?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Стрессоустойчивость и грамотное распределение времени",
+         correct: "A"
+     },
+     {
+         question: "Какое качество помогает в профессии туризма в общении с клиентами и поддержании их удовлетворенности?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Командная игра",
+         correct: "B"
+     },
+     {
+         question: "Какой из перечисленных критериев является важным для успешной работы с различными типами клиентов в туризме?",
+         a: "Стрессоустойчивость и грамотное распределение времени",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Командная игра",
+         correct: "B"
+     },
+     {
+         question: "Какое из следующих качеств помогает в профессии туризма в управлении ресурсами и бюджетом?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Стрессоустойчивость и грамотное распределение времени",
+         correct: "A"
+     },
+     {
+         question: "Какое качество является ключевым для работы в условиях постоянного обучения и адаптации в туризме?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Стрессоустойчивость и грамотное распределение времени",
+         correct: "A"
+     },
+     {
+         question: "Какое из перечисленных качеств помогает в профессии туризма в работе с различными видами туристов и их потребностями?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Командная игра",
+         correct: "B"
+     },
+     {
+         question: "Какой критерий является важным для успешной работы в условиях высокого риска в туризме?",
+         a: "Стрессоустойчивость и грамотное распределение времени",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Стратегическое мышление",
+         correct: "C"
+     },
+     {
+         question: "Какое из следующих качеств помогает в профессии туризма в работе с непредвиденными обстоятельствами и кризисами?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Стрессоустойчивость и грамотное распределение времени",
+         correct: "A"
+     },
+     {
+         question: "Какое качество является ключевым для работы в условиях постоянного обучения и адаптации в туризме?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Стрессоустойчивость и грамотное распределение времени",
+         correct: "A"
+     },
+     {
+         question: "Какое из следующих качеств помогает в профессии туризма в работе с различными видами туристов и их потребностями?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Командная игра",
+         correct: "B"
+     },
+     {
+         question: "Какой критерий является важным для успешной работы в условиях высокого риска в туризме?",
+         a: "Стрессоустойчивость и грамотное распределение времени",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Стратегическое мышление",
+         correct: "C"
+     },
+     {
+         question: "Какое из следующих качеств помогает в профессии туризма в работе с непредвиденными обстоятельствами и кризисами?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Стрессоустойчивость и грамотное распределение времени",
+         correct: "A"
+     },
+     {
+         question: "Какое качество является ключевым для работы в условиях постоянного обучения и адаптации в туризме?",
+         a: "Стратегическое мышление",
+         b: "Эмпатия и эмоциональный интеллект",
+         c: "Стрессоустойчивость и грамотное распределение времени",
+         correct: "A"
+     },
+     {
+         question: "Какое из следующих направлений туризма наиболее популярно среди молодежи?",
+         a: "Экотуризм",
+         b: "Горный туризм",
+         c: "Городской туризм",
+         correct: "B"
+     },
+     {
+         question: "Какие виды туризма включают в себя посещение исторических и культурных памятников?",
+         a: "Экотуризм",
+         b: "Городской туризм",
+         c: "Культурный туризм",
+         correct: "C"
+     },
+     {
+         question: "Что такое экстремальные виды туризма?",
+         a: "Посещение музеев и исторических мест",
+         b: "Посещение горячих источников",
+         c: "Посещение мест с экстремальными условиями (например, скалолазание, сноубординг)",
+         correct: "C"
+     },
+     {
+         question: "Какие профессии связаны с организацией туристических маршрутов и экскурсий?",
+         a: "Туроператоры",
+         b: "Гостиничные работники",
+         c: "Повара",
+         correct: "A"
+     },
+     {
+         question: "Что такое \"туристическая ниша\"?",
+         a: "Специальная группа людей, посещающих туристические объекты",
+         b: "Специальный вид туризма, ориентированный на определенную аудиторию",
+         c: "Специальная туристическая программа",
+         correct: "B"
+     },
+     {
+         question: "Какие виды туризма наиболее влияют на окружающую среду?",
+         a: "Экотуризм",
+         b: "Городской туризм",
+         c: "Горный туризм",
+         correct: "A"
+     },
+     {
+         question: "Какие профессии связаны с рекламой и продвижением туристических услуг?",
+         a: "Туроператоры",
+         b: "Рекламные агенты",
+         c: "Повара",
+         correct: "B"
+     },
+     {
+         question: "Что такое \"туризм низкой активности\"?",
+         a: "Туризм, требующий активных действий (например, сноубординг, альпинизм)",
+         b: "Туризм, требующий минимальных усилий (например, пляжный отдых, путешествия на автомобиле)",
+         c: "Туризм, требующий высокой активности (например, горные походы)",
+         correct: "B"
+     },
+     {
+         question: "Какие виды туризма наиболее связаны с приключениями и экстремальными действиями?",
+         a: "Экотуризм",
+         b: "Городской туризм",
+         c: "Экстремальный туризм",
+         correct: "C"
+     },
+     {
+         question: "Какие профессии связаны с обучением и подготовкой туристов?",
+         a: "Туроператоры",
+         b: "Инструкторы по приключенческому туризму",
+         c: "Повара",
+         correct: "B"
+     },
+     {
+         question: "Что такое \"туристический продукт\"?",
+         a: "Специальный вид туризма",
+         b: "Специальное оборудование для туризма",
+         c: "Услуга, предлагаемая туроператорами",
+         correct: "C"
+     },
+     {
+         question: "Какие виды туризма наиболее связаны с активным отдыхом и спортом?",
+         a: "Экотуризм",
+         b: "Городской туризм",
+         c: "Активный туризм",
+         correct: "C"
+     },
+     {
+         question: "Какие профессии связаны с оказанием услуг на туристических объектах?",
+         a: "Туроператоры",
+         b: "Работники туристических агентств",
+         c: "Повара",
+         correct: "B"
+     },
+     {
+         question: "Что такое \"туризм высокой активности\"?",
+         a: "Туризм, требующий минимальных усилий (например, пляжный отдых)",
+         b: "Туризм, требующий высокой активности (например, горные походы, сноубординг)",
+         c: "Туризм, требующий активных действий (например, скалолазание)",
+         correct: "B"
+     },
+     {
+         question: "Какие виды туризма наиболее популярны среди семей?",
+         a: "Экотуризм",
+         b: "Городской туризм",
+         c: "Семейный туризм",
+         correct: "C"
+     },
+     {
+         question: "Какие профессии связаны с организацией и проведением туристических мероприятий?",
+         a: "Туроператоры",
+         b: "Организаторы туристических мероприятий",
+         c: "Повара",
+         correct: "B"
+     },
+     {
+         question: "Что такое \"туризм низкой активности\"?",
+         a: "Туризм, требующий минимальных усилий (например, пляжный отдых)",
+         b: "Туризм, требующий высокой активности (например, горные походы)",
+         c: "Туризм, требующий активных действий (например, скалолазание)",
+         correct: "B"
+     },
+     {
+         question: "Какие виды туризма наиболее связаны с экологическим образованием и охраной окружающей среды?",
+         a: "Экотуризм",
+         b: "Городской туризм",
+         c: "Горный туризм",
+         correct: "A"
+     },
+     {
+         question: "Какие профессии связаны с управлением туристическими ресурсами и инфраструктурой?",
+         a: "Туроператоры",
+         b: "Менеджеры туристических объектов",
+         c: "Повара",
+         correct: "B"
+     },
+     {
+         question: "Что такое \"туризм высокой активности\"?",
+         a: "Туризм, требующий минимальных усилий (например, пляжный отдых)",
+         b: "Туризм, требующий высокой активности (например, горные походы, сноубординг)",
+         c: "Туризм, требующий активных действий (например, скалолазание)",
+         correct: "B"
+     }
+ ];
+ 
+ 
+ let currentQuestion =   0;
+ let score =   0;
+ let incorrectAnswers = [];
+ 
+ function displayQuestion() {
+     const question = quizData[currentQuestion];
+     document.getElementById('quiz').innerHTML = `<h2>${question.question}</h2>`;
+     document.getElementById('quiz').innerHTML += `<input type="radio" name="option" value="A"> ${question.a}<br>`;
+     document.getElementById('quiz').innerHTML += `<input type="radio" name="option" value="B"> ${question.b}<br>`;
+     document.getElementById('quiz').innerHTML += `<input type="radio" name="option" value="C"> ${question.c}<br>`;
+     document.getElementById('submit').addEventListener('click', checkAnswer);
+ }
+ 
+ function checkAnswer() {
+     const selectedOption = document.querySelector('input[name="option"]:checked').value;
+     if (selectedOption === quizData[currentQuestion].correct) {
+         score++;
+     } else {
+         incorrectAnswers.push(currentQuestion);
+     }
+     currentQuestion++;
+     if (currentQuestion < quizData.length) {
+         displayQuestion();
+     } else {
+         displayResult();
+     }
+ }
+ 
+ function displayResult() {
+     document.getElementById('quiz').innerHTML = '';
+     document.getElementById('result').innerHTML = `Вы ответили правильно на ${score} вопросов.`;
+     document.getElementById('retry').classList.remove('hidden-button');
+     document.getElementById('showAnswer').classList.remove('hidden-button');
+ }
+ 
+ document.getElementById('retry').addEventListener('click', function() {
+     currentQuestion =   0;
+     score =   0;
+     incorrectAnswers = [];
+     displayQuestion();
+ });
+ 
+ document.getElementById('showAnswer').addEventListener('click', function() {
+     incorrectAnswers.forEach(function(questionIndex) {
+         console.log(quizData[questionIndex].question);
+         console.log(`Правильный ответ: ${quizData[questionIndex].correct}`);
+     });
+ });
+ 
+ // Add this line to hide the quiz initially
+ document.getElementById('quiz').classList.add('hidden');
+ 
+ // Add this event listener to show the quiz and buttons when the button is clicked
+ document.getElementById('startQuiz').addEventListener('click', function() {
+     document.getElementById('quiz').classList.remove('hidden');
+     document.getElementById('submit').classList.remove('hidden-button');
+     document.getElementById('retry').classList.remove('hidden-button');
+     document.getElementById('showAnswer').classList.remove('hidden-button');
+     displayQuestion();
+ });
+ 
+ 
+ document.getElementById('startQuiz').addEventListener('click', function() {
+     document.querySelector('.modal').classList.remove('hidden');
+     document.querySelector('.overlay').classList.remove('hidden');
+     displayQuestion(); // Start the quiz
+ });
+ 
+ document.querySelector('.overlay').addEventListener('click', function() {
+     document.querySelector('.modal').classList.add('hidden');
+     document.querySelector('.overlay').classList.add('hidden');
+ });
+ 
+ // Add this to close the modal when clicking the close button
+ document.getElementById('showAnswer').addEventListener('click', function() {
+     document.querySelector('.modal').classList.add('hidden');
+     document.querySelector('.overlay').classList.add('hidden');
+ });
+ function displayResult() {
+     const totalQuestions = quizData.length;
+     const percentage = (score / totalQuestions) *  100;
+     const progressBar = document.getElementById('progressBar');
+     const percentageText = document.getElementById('percentageText');
+ 
+     // Добавьте анимацию для текста процентов
+     percentageText.style.opacity =  0;
+     setTimeout(() => {
+         percentageText.textContent = `${percentage.toFixed(0)}%`;
+         percentageText.style.opacity =  1;
+     },  100);
+ 
+     // Обновите ширину полосы прогресса с анимацией
+     progressBar.style.width = '0%';
+     progressBar.style.transition = 'width  1s ease-in-out';
+     setTimeout(() => {
+         progressBar.style.width = `${percentage}%`;
+     },  100);
+ 
+     document.getElementById('quiz').innerHTML = '';
+     document.getElementById('result').innerHTML = `Вы ответили правильно на ${score} вопросов из ${totalQuestions}.`;
+     document.getElementById('retry').classList.remove('hidden-button');
+     document.getElementById('showAnswer').classList.remove('hidden-button');
+ }
+ document.getElementById('retry').addEventListener('click', function() {
+     currentQuestion =  0;
+     score =  0;
+     incorrectAnswers = [];
+     // Сброс полосы прогресса
+     document.getElementById('progressBar').style.width = '0%';
+     document.getElementById('percentageText').textContent = '0%';
+     displayQuestion();
+ });
+ 
+ </script>
+</html>

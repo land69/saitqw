@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: "Inter", sans-serif;
+}
+body {
+  color: #eee;
+  background: #ffffff;
+}
+/* #bottom-menu{
+    position: fixed;
+    bottom:  0;
+    width:  100%;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-around;
+    padding:  10px  0;
+}
+
+#bottom-menu a {
+    text-decoration: none;
+    color: #333;
+} */
+
+
+
+
+body {
+    font-family: "Inter", sans-serif;
+    margin:  0;
+    padding:  0;
+}
+
+header {
+  height: 400px;
+    text-align: center;
+    background-image: url('img/les.jpg');
+  background-size: cover; /* Для того, чтобы изображение заполнило всю область */
+  background-position: center; /* Для того, чтобы изображение было отцентровано */
+  filter: blur(0px); /* Уровень размытия, вы можете увеличить или уменьшить значение */
+  background-color: rgba(255,  255,  255,  0.5); /* White background with  50% opacity */
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    font-family: "Inter", sans-serif; /* Белый цвет */
+}
+.profession{
+    flex:  1  0  200px; /* flex-grow, flex-shrink, flex-basis */
+    margin:  10px;
+    padding:  20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:  200px;
+    font-family: "Inter", sans-serif;
+}
+.professions {
+    padding-top: 50px;
+    background-color: #EDF6FF;
+    font-family: "Inter", sans-serif; /* Темно-синий цвет */
+    padding-bottom: 50px;
+}
+.profes{
+    color: #000000;
+    font-family: "Inter", sans-serif;
+}
+.profes_x{
+    color: #192633;
+    width: 300px;
+    font-family: "Inter", sans-serif;
+}
+@media (max-width:  600px) {
+    .profession {
+      flex:  1  0  100%; /* Блоки будут занимать всю ширину экрана на мобильных устройствах */
+    }
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: "Inter", sans-serif;
+  }
+.popur_prof{
+    color: #000000;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+.popur_x{
+    color: #000000;
+    font-size: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+.popur_x2{
+    text-align: center;
+    color: #000000cc;
+    width: 400px;
+    font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+/* #bottom-menu {
+    position: fixed;
+    bottom:  0;
+    width:  100%;
+    background-color: #1E90FF;
+    display: flex;
+    justify-content: space-around;
+    padding:  10px  0;
+    font-family: "Inter", sans-serif;
+    transition: top  0.3s;
+  }
+  
+#bottom-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    transition: color  0.3s ease; 
+  }
+#bottom-menu a:hover {
+    color: #0000ff;
+    transform: scale(1.1); 
+  } */
+  /* #bottom-menu {
+    position: fixed;
+    bottom:  0;
+    width:  100%;
+    background-color: #333;
+    display: none;
+  } */
+
+
+  #bottom-menu {
+    position: fixed;
+    bottom:  0;
+    width:  100%;
+    background-color: #1489ff;
+    display: flex;
+    justify-content: space-around;
+    padding:  10px  0;
+  }
+  
+  #bottom-menu a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  @media screen and (min-width:  800px) {
+    #bottom-menu a {
+      padding:  0  20px;
+    }
+  }
+.info_x{
+    color: #FFFFFFCC;
+}
+.debil{
+    font-family: "Inter", sans-serif;
+}
+.education{
+    padding-top: 20px;
+background-color: #1E90FF
+;
+color: #ffffff;
+padding-bottom: 20px;
+}
+.tyr_otr{
+    color: #FFFFFFCC;
+    width: 400px;
+    font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+.tyr_otr_x{
+    font-size: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+.container_x{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,  1fr));
+    gap:  1rem;
+
+  }
+  
+  .info-block {
+    padding:  1rem;
+    border-radius:  5px;
+    text-align: center;
+    color: #ffffff;    
+  }
+.education_section{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+  @media (max-width:  600px) {
+    .container {
+      grid-template-columns:  1fr;
+    }
+  }
+
+.car_2{
+    width: 80px;
+    height: 70px;
+}
+
+
+#bottom-menu.hide {
+  transform: translateY(100%);
+   /* Сдвигаем меню вниз */
+}
+
+
+#skills {
+  width:  100%;
+  margin: auto;
+  background-color: #f2f2f2;
+  padding:  30px;
+  border-radius:  10px;
+}
+
+#skills h2 {
+  color: #333;
+  text-align: left;
+}
+
+#skills p {
+  font-size:  18px;
+  margin-bottom:  10px;
+  padding-left:  20px;
+}
+
+#skills p:before {
+  content: "• ";
+  color: #333;
+}
+
+
+
+
+
+
+
+#skills {
+  background-color: #f8f8f8;
+  padding:  50px;
+  border-radius:  5px;
+  box-shadow:  0  2px  5px rgba(0,  0,  0,  0.1);
+}
+
+#skills h2 {
+  margin-bottom:  20px;
+  font-size:  24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding:  0;
+  margin:  0;
+}
+
+.skills-list li {
+  padding:  10px  0;
+  font-size:  18px;
+  color: #666;
+}
+
+.skills-list li:before {
+  content: "• ";
+  color: #333;
+  font-weight: bold;
+}
+#footer {
+  left:  0;
+  bottom:  0;
+  width:  100%;
+  background-color: #1E90FF;
+  color: white;
+  text-align: center;
+  padding:  10px;
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top:  0;
+  left:  0;
+  width:  100%;
+  height:  100%;
+  background: rgba(0,  0,  0,  0.7);
+  z-index:  1000;
+}
+
+.modal {
+  position: fixed;
+  top:  50%;
+  left:  50%;
+  transform: translate(-50%, -50%);
+  background: #1E90FF;
+  padding:  20px;
+  z-index:  1001;
+}
+
+.modal-content {
+  max-width:  500px;
+  margin:  0 auto;
+}
+
+
+.hidden-button {
+  display: none;
+}
+
+
+
+#progressBarContainer {
+  width:  100%;
+  background-color: #f3f3f3;
+  height:  20px;
+  position: relative;
+}
+
+#progressBar {
+  height:  100%;
+  width:  0;
+  background-color: #4CAF50;
+  transition: width  1s ease-in-out; /* Добавьте эту строку для анимации */
+}
+
+#percentageText {
+  position: absolute;
+  top:  0;
+  left:  0;
+  color: #000;
+  font-size:  14px;
+  transition: opacity  1s ease-in-out; /* Добавьте эту строку для анимации текста */
+}
+.test_one{
+  width: 200px;
+  height: 300px;
+  background-color: #1489ff;
+  border-radius: 6px;
+}
+
+.btn{
+ background-color: #f2f2f2;
+  color: #1489ff;
+  width: 150px;
+  height: 50px;
+border-radius: 10px;
+border-color: white;
+font-size: 20px;
+}
+
+/* 
+
+.card .text {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.card {
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  text-align: center;
+  display: inline-block;
+  background-color: #1489ff;
+  width: 300px;
+  height: 400px;
+}
+
+.card img {
+  max-width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width:468px) {
+  .card {
+    width: 100%;
+  }
+} */
+
+
+
+.button{
+  border-radius: 5px;
+  width: 140px;
+  height: 30px;
+  border-color: white;
+
+}
+#quiz{
+  padding-bottom: 10px;
+}
+.result{
+  padding-top: 10px;
+}

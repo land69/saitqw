@@ -1,0 +1,14 @@
+/* Define your dark theme styles */
+.dark-theme {
+    background-color: #000;
+    color: #fff;
+    /* Add more styles as needed for your dark theme */
+  }
+  
+  /* Optionally, define global styles that will be overridden by the dark theme */
+  :root {
+    background-color: #fff;
+    color: #000;
+    /* Add more global styles as needed */
+  }
+  

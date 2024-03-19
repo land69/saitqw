@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    body {
+        font-family: 'Inter';
+      max-width: 1920px;
+      margin: 0 auto;
+      /* padding: 20px; */
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #comment-form {
+      margin-bottom: 20px;
+    }
+
+    #comments-container {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .comment {
+      box-shadow: 0 0 10px 1px #1E90FF; /* Здесь задано значение для тени */
+
+      
+      border: 0px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      max-width: 1920px;
+      color: rgb(255, 255, 255);
+      font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 150%;     
+  background-color: #1E90FF;
+    }
+
+    .comment .author {
+      font-weight: bold;
+    }
+
+    .comment .timestamp {
+      font-size: 0.8em;
+      color: #666;
+    }
+    label{
+      color: rgb(0, 0, 0);
+      font-family: 'Inter';
+       font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 150%;
+    }
+    button{
+        width: 350px;
+        height: 60px;
+   font-size: 20px;
+              border-radius: 10px;
+             border: 0px;
+                margin-top: 70px;
+background-color: #1E90FF;
+color: white;
+
+                display: flex;
+  justify-content: center;
+  align-items: center;
+
+    }
+    textarea{
+      border-radius: 10px;
+      background-color: #1E90FF;
+      max-width: 600px;
+    }
+    .name{
+      border-radius: 10px;
+      width: 150px;
+      height: 30px;
+    }
+
+
+
+    .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-row label {
+  color: rgb(0, 0, 0);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 150%;
+}
+
+.form-row input,
+.form-row textarea {
+  border-radius: 10px;
+  background-color: #eeeeee;
+  color: #ffffff;
+  border-color: #1E90FF;
+  border: 1px;
+  /* box-shadow: 0 0 40px 5px #1E90FF; Здесь задано значение для тени */
+border: 0px;
+}
+
+
+
+.comment .content {
+  max-width: 1920px;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+.name {
+        color: rgb(0, 0, 0); /* Белый цвет текста */
+        border-radius: 10px;
+        width: 150px;
+        height: 30px;
+    }
+    #name{
+        color: #666;
+    }
+#comment{
+    color: #666;
+    padding-top: 10px;
+}
+#footer {
+  left:  0;
+  bottom:  0;
+  width:  100%;
+  background-color: #1E90FF;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#bottom-menu {
+    position: fixed;
+    bottom:  0;
+    width:  100%;
+    background-color: #1489ff;
+    display: flex;
+    justify-content: space-around;
+    padding:  10px  0;
+  }
+  
+  #bottom-menu a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  @media screen and (min-width:  800px) {
+    #bottom-menu a {
+      padding:  0  20px;
+    }
+  }#bottom-menu.hide {
+  transform: translateY(100%);
+   /* Сдвигаем меню вниз */
+}
+#footer a {
+  color: white;
+  text-decoration: none;
+}
+  </style>
+   <link rel="stylesheet" href="glav.css">
+   <link rel="stylesheet" href="footer2.css">
+</head>
+<body>
+  
+  
+   
+    
+    <h1>Поделитесь своими эмоциями о прохожднния теста</h1>
+    <form id="comment-form">
+      <div class="form-row">
+        <!-- <label for="name">Имя:</label> -->
+        <input class="name" type="text" id="name" placeholder="Имя" required>
+      </div>
+      <div class="form-row">
+        <!-- <label for="comment">Комментарий:</label> -->
+        <textarea id="comment" type="text" id="comment" placeholder="Комментарий" required></textarea>
+      </div>
+      <button type="submit">Отправить</button>
+    </form>
+    <ul id="comments-container"></ul>
+
+    <script>
+        // document.getElementById('name').addEventListener('focus', function() {
+        //     this.placeholder = '';
+        // });
+       
+      
+    function addComment() {
+      var nameInput = document.getElementById('name');
+      var commentInput = document.getElementById('comment');
+      var name = nameInput.value;
+      var comment = commentInput.value;
+
+      // Получаем текущую дату и время
+      var timestamp = new Date().toLocaleString();
+
+      // Создаем новый элемент комментария
+      var newComment = document.createElement('li');
+      newComment.className = 'comment';
+
+      // Формируем HTML-разметку комментария
+      newComment.innerHTML = '<div class="author">' + name + '</div>' +
+        '<div class="timestamp">' + timestamp + '</div>' +
+        '<div class="content">' + comment + '</div>';
+
+      // Добавляем новый комментарий в начало списка
+      var commentsContainer = document.getElementById('comments-container');
+      commentsContainer.insertBefore(newComment, commentsContainer.firstChild);
+
+      // Очищаем поля ввода
+      nameInput.value = '';
+      commentInput.value = '';
+    }
+
+    // Обработчик события отправки формы
+    document.getElementById('comment-form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Предотвращаем отправку формы
+      addComment();
+    });
+     // Функция для добавления комментария в список и сохранения в localStorage
+     function addComment() {
+      var nameInput = document.getElementById('name');
+      var commentInput = document.getElementById('comment');
+      var name = nameInput.value;
+      var comment = commentInput.value;
+      var timestamp = new Date().toLocaleString();
+
+      var newComment = document.createElement('li');
+      newComment.className = 'comment';
+      newComment.innerHTML = '<div class="author">' + name + '</div>' +
+        '<div class="timestamp">' + timestamp + '</div>' +
+        '<div class="content">' + comment + '</div>';
+
+      var commentsContainer = document.getElementById('comments-container');
+      commentsContainer.insertBefore(newComment, commentsContainer.firstChild);
+
+      // Сохраняем комментарий в localStorage
+      var comments = JSON.parse(localStorage.getItem('comments')) || [];
+      comments.unshift({ name: name, comment: comment, timestamp: timestamp });
+      localStorage.setItem('comments', JSON.stringify(comments));
+
+      nameInput.value = '';
+      commentInput.value = '';
+    }
+
+    document.getElementById('comment-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      addComment();
+    });
+
+    // Восстановление комментариев из localStorage при загрузке страницы
+    window.addEventListener('load', function() {
+      var comments = JSON.parse(localStorage.getItem('comments')) || [];
+
+      var commentsContainer = document.getElementById('comments-container');
+      comments.forEach(function(commentData) {
+        var newComment = document.createElement('li');
+        newComment.className = 'comment';
+        newComment.innerHTML = '<div class="author">' + commentData.name + '</div>' +
+          '<div class="timestamp">' + commentData.timestamp + '</div>' +
+          '<div class="content">' + commentData.comment + '</div>';
+
+        commentsContainer.appendChild(newComment);
+      });
+    });
+  </script>
+   <div id="bottom-menu">
+    <a href="index.html">Главная</a>
+    <!-- <a href="test.html">Тесты</a> -->
+    <a href="settings.html">Контакты</a>
+    
+
+  </div>
+
+ 
+  <footer id="footer">
+    <p>&copy;  2024 Your Name. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@example.com">info@example.com</a></p>
+    <p>Follow us on social media:
+      <a href="https://www.facebook.com/yourpage">Facebook</a> |
+      <a href="https://www.twitter.com/yourprofile">Twitter</a> |
+      <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a>
+    </p>
+  </footer>
+</body>
+</html>
